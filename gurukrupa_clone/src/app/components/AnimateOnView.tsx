@@ -2,13 +2,17 @@
 
 import { useEffect, useRef, useState } from "react";
 
+interface AnimateOnViewProps {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number; // 👈 allow delay in ms
+}
+
 export default function AnimateOnView({
   children,
   className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+  delay = 0,
+}: AnimateOnViewProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -24,15 +28,17 @@ export default function AnimateOnView({
     );
 
     if (ref.current) observer.observe(ref.current);
-
     return () => observer.disconnect();
   }, []);
 
   return (
     <div
       ref={ref}
-      className={`${className} ${
-        visible ? "animate-fade-up" : "opacity-0"
+      style={{ transitionDelay: `${delay}ms` }} // 👈 delay handled safely
+      className={`${className} transition-all duration-700 ease-out ${
+        visible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-6"
       }`}
     >
       {children}

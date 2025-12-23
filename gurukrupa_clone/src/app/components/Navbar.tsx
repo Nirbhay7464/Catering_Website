@@ -46,8 +46,7 @@ export default function Navbar() {
         <Link href="/" className="relative z-[110] group">
           <div className="bg-white p-2 rounded-2xl shadow-sm group-hover:shadow-md transition-all">
             <Image
-              src="/images/logo6
-              +9.png"
+              src="/images/logo.png"
               alt="Gurukrupa Samrat"
               width={200}
               height={100}
