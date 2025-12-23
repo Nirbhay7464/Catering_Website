@@ -160,7 +160,7 @@ export default function Navbar() {
                     Premium Catering Services
                   </p>
                   <Link
-                    href="/contact"
+                    href="/book-now"
                     onClick={() => setOpen(false)}
                     className="flex items-center justify-center gap-3 w-full bg-[#0b1d39] text-white py-4 rounded-2xl text-sm font-black shadow-xl active:scale-95 transition-all hover:bg-orange-600"
                   >
