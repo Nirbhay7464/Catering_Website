@@ -2,11 +2,10 @@
   "version": 2,
   "cleanUrls": true,
   "framework": "nextjs",
-  "redirects": [
-    {
-      "source": "/old-page",
-      "destination": "/new-page",
-      "permanent": true
-    }
-  ]
+  "trailingSlash": false,
+  "images": {
+    "sizes": [320, 480, 640, 750, 828, 1080, 1200, 1920, 2048],
+    "domains": [],
+    "minimumCacheTTL": 60
+  }
 }
