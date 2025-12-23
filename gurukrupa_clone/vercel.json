@@ -2,12 +2,6 @@
   "version": 2,
   "cleanUrls": true,
   "framework": "nextjs",
-  "functions": {
-    "api/*.js": {
-      "maxDuration": 60,
-      "memory": 1024
-    }
-  },
   "redirects": [
     {
       "source": "/old-page",
